@@ -20,7 +20,7 @@ export default async function PostsPage() {
     <main className="h-screen flex flex-col gap-8 items-center justify-center">
       <h1 className="font-semibold text-3xl">All posts ({postCount})</h1>
       <ul className="border-t border-b border-black/10 py-5 leading-8">
-        {user.posts.map((post) => (
+        {user?.posts.map((post) => (
           <li key={post.id} className="flex items-center justify-between px-5">
             <Link href={`/posts/${post.slug}`}>{post.title}</Link>
           </li>
